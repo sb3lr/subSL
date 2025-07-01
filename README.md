@@ -37,17 +37,20 @@
 ```bash
 git clone https://github.com/sb3ly/SubSL.git
 cd SubSL
+```
 أنشئ بيئة افتراضية (Virtual Environment) (موصى به):
 
-bash
+```bash
 
 python3 -m venv venv
 source venv/bin/activate  # لنظامي Linux/macOS
 # venv\\Scripts\\activate  # لنظام Windows
+```
 تثبيت التبعيات (Install dependencies):
 
-bash
+```bash
 pip install -r requirements.txt
+```
 إذا لم يكن ملف requirements.txt موجودًا بعد، قم بإنشائه بالمحتوى التالي ثم أعد تشغيل pip install -r requirements.txt:
 
 nginx
@@ -103,17 +106,16 @@ Shodan: سجل في Shodan للحصول على مفتاح API الخاص بك.
 🚀 الاستخدام
 بمجرد إعداد ملفات config.yaml, .env, و wordlists.txt, يمكنك تشغيل SubSL من سطر الأوامر:
 
-bash
-python3 subsl.py <اسم_النطاق>
-مثال:
 
-bash
+```bash
 python3 subsl.py example.com
+```
 تشغيل واجهة الويب (اختياري)
 يمكنك تشغيل واجهة الويب جنبًا إلى جنب مع عملية الفحص. ستعرض واجهة الويب حالة التقدم الحالية:
 
-bash
+```bash
 python3 subsl.py example.com --web
+```
 بعد تشغيل هذا الأمر، ستكون واجهة الويب متاحة على: http://localhost:8000
 
 📊 التقارير
