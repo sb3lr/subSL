@@ -1,5 +1,3 @@
-# إنشاء ملف README.md بالمحتوى الذي طلبته وحفظه في مسار يمكن تحميله
-readme_content = """
 # SubSL: أداة متقدمة لجمع وتحليل النطاقات الفرعية (Subdomain Enumeration)
 
 ![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)
