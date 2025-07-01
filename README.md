@@ -1,60 +1,70 @@
-# SubSL - Subdomain Scanner with Live Dashboard
 
-SubSL is a powerful subdomain enumeration and monitoring tool featuring a live web dashboard for tracking scan progress in real-time.
+# SubSL: أداة متقدمة لاكتشاف وتحليل النطاقات الفرعية
 
-## ✨ Features
-- OSINT-based subdomain enumeration (e.g. crt.sh, AlienVault, HackerTarget)
-- Bruteforce subdomain discovery
-- Real-time DNS resolution & HTTP reachability checks
-- Web dashboard with live stats and logs via WebSocket
-- Optional Shodan integration for more insights
+![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+[![GitHub followers](https://img.shields.io/github/followers/sb3ly?style=social)](https://github.com/sb3ly)
 
-## 📦 Requirements
-- Python 3.9+
-- Linux recommended (Debian, Kali, Arch tested)
+---
 
-## 🔧 Installation
+SubSL is a powerful subdomain enumeration and analysis tool designed for red teamers, bug bounty hunters, and cybersecurity researchers. It combines OSINT gathering, DNS brute-forcing, HTTP probing, and a built-in live dashboard to provide real-time visibility into discovered subdomains.
+
+## Features
+
+- 🔍 OSINT Subdomain Gathering (SecurityTrails, Shodan, GitHub)
+- 🔎 Brute-force DNS Enumeration
+- 🌐 HTTP Probing and Validation
+- 📊 Real-time Web Dashboard (`--web`)
+- 🛡️ Subdomain Takeover Detection
+- 📝 Export results to TXT or JSON
+
+## Installation
+
 ```bash
-git clone https://github.com/YOUR_USERNAME/subsl.git
-cd subsl
+git clone https://github.com/sb3ly/SubSL.git
+cd SubSL
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 🔑 Environment Variables (.env)
-Create a `.env` file in the root directory:
+## Usage
 
-```env
-SHODAN_API_KEY=your_shodan_api_key
-GITHUB_TOKEN=your_github_token
-SECURITYTRAILS_API_KEY=your_securitytrails_key
-```
-
-## 🚀 Usage
-### Basic Scan:
 ```bash
+# Basic scan with OSINT + brute force + HTTP check
 python3 subSL.py example.com
-```
 
-### With Web Dashboard:
-```bash
+# Enable web dashboard on localhost:8000
 python3 subSL.py example.com --web
 ```
 
-Open [http://localhost:8000](http://localhost:8000) in your browser to monitor.
+## API Keys Setup
 
-## 🛠️ Options
-- `--web` : Enable web dashboard
-- `--no-brute` : Disable bruteforce subdomain guessing
-- `--wordlist PATH` : Custom wordlist for bruteforce
+Create a `.env` file in the root directory with the following:
 
-## 🧠 Notes
-- Port 8000 must be free.
-- If WebSocket live updates don’t work, install proper backends:
-  ```bash
-  pip install 'uvicorn[standard]'
-  ```
+```
+SECURITYTRAILS_API_KEY=your_key_here
+SHODAN_API_KEY=your_key_here
+GITHUB_TOKEN=your_key_here
+```
 
-## 📄 License
-MIT © 2025 sb3ly
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+<div dir="rtl" align="center">
+
+## 🇸🇦 وصف الأداة بالعربية
+
+SubSL هي أداة متقدمة لاكتشاف النطاقات الفرعية، موجهة للهاكر الأخلاقيين والباحثين في الأمن السيبراني. توفر لك تحليلاً شاملاً عن طريق:
+
+- جمع النطاقات الفرعية من مصادر OSINT
+- التخمين باستخدام wordlist لاكتشاف نطاقات مخفية
+- فحص DNS وHTTP
+- واجهة ويب تفاعلية تعرض التحديثات بشكل مباشر
+- كشف احتمالية الاستيلاء على النطاقات الفرعية
+- تصدير النتائج إلى ملفات
+
+</div>
