@@ -15,7 +15,7 @@ SubSL is a powerful subdomain enumeration and monitoring tool featuring a live w
 
 ## 🔧 Installation
 ```bash
-git clone https://github.com/YOUR_USERNAME/subsl.git
+git clone https://github.com/sb3lr/subsl.git
 cd subsl
 python3 -m venv venv
 source venv/bin/activate
@@ -57,4 +57,4 @@ Open [http://localhost:8000](http://localhost:8000) in your browser to monitor.
   ```
 
 ## 📄 License
-MIT © 2025 sb3ly
+MIT © 2025 sb3lr
